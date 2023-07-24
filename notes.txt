@@ -1,0 +1,135 @@
+Erro---> n deu certo colocar icon 1 do zap em svg somente atraves do control c control v - tive que baixar png
+    na verdade eu havia errado o tipo de relacionamento do link com html + css
+
+conteúdo 5' demorei praticando uns 30'
+
+tags semanticas
+
+-->acessibilidade ( para os deficientes visuais compreenderem como a pagina esta estruturada)
+
+-->motores de busca conseguem encontrar as partes +importantes do site de um jeito mais rápido ( quando os navegadores tipo google conseguir encontrar os elementos do meu site com maior prioridade quando for exibir pro usuário final)
+
+->diminuir a necessidade de usar div classe's e ou id's
+
+
+-->   <header></header>  significa o cabeçalho da pagina web
+
+              <nav></nav>   quer dizer que vai agrupar os links de navegação que tem dentro do header 
+                          <ul></ul>   uma lista de coisas ~ordenado
+
+                          <ol></ol>   uma lista de coisas ordenada
+
+                                    <li></li>   cada coisa dentro da lista
+
+                                              EXEMPLO:
+
+                                              <ul/ol>
+                                                  <li>link1<li>
+                                                  <li>link2<li>
+                                                  <li>link3<li>
+                                                  <li>link4<li>
+                                              </ul/ol>
+
+-->    <main></main>   para agrupar os elementos principais da pagina (o que aparece)
+                    <section></section>       para agrupar os textos que tem dentro do main
+-->    <footer></footer>   coisas do rodapé do site
+
+ordem que respondi 
+exportar imagens svg e ou 📤paste elas como svg 
+colocou cada elemento dentro de suas devidas tags semânticas e seus links
+
+--> Propriedades do css VAI ESCOLHER COMO AS CAIXINHAS FILHAS VÃO OCUPAR O ESPAÇO DAS CAIXAS PAIS 
+
+             ___> sentido e direção
+            /___> se transbordar pular de linha
+    escolher ___>  mesmo eixo para todos filhos               ___>verticalmente  align- content
+            \___>  o prório espaço e ou caixinhas ("irmãs") _/
+                                                             \___>horizontalmente justify - content
+
+
+    display: flex ;                 ativa todas as propriedades para colocar um box filho do lado do outro
+    -flex-direction:                
+    -flex-wrap:                     quando encher a linha pula para outra
+    -align-content: 
+    -justify-content: normal
+
+
+    justify-content: space-around ; espaço entre as box filhas do box pai que estou atribuindo  parecido gap ( mas este so funciona se tiver apenas 2 filhos o gap funciona com mais)
+
+    align-itens: center ;           coloca no mesmo eixo   
+
+    gap: pixels         ;           distancia somente entre as box filhas  mesma função que o seletor a + a com menos código   
+
+                    como saber onde aplicar ? 
+                        pergunte - o q vc quer organizar ? 
+                        essas coisas é pai ou é filho ?
+
+                        se for pai (deve por display flex no avô)
+                        se for filho ( deve por display flex no pai)     
+                    em fim deve selecionar no css a hierarquia superior mais próxima ao que se deseja organizar 
+
+--->ACESSIBILIDADE padrão definido pelo W3C 
+
+antes
+
+<header>
+    img 
+    nav 
+        ul 
+            li
+            li
+            li
+    
+
+</header>
+
+O padrão é que o nav n pode estar dentro de um header ?
+ o pq n entendi
+
+depois (padronizado)
+
+-coloca tudo na tag nav 
+-a tag img dentro de um link 
+-link no texto dentro das li
+
+<nav>
+    a 
+        img 
+    
+    ul 
+        li
+            a
+        li 
+            a
+        li 
+            a
+
+
+</nav>
+
+
+
+
+link das fontes usadas 
+
+font-family: 'DM Sans', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+(fontes utilizadas)[https://fonts.google.com/share?selection.family=DM%2BSans:wght@400;700%7CMulish:wght@400;700%7COpen%2BSans:wght@400;700]
+
+
+cores utilizadas
+rgb (red , green , blue )
+hex # 00   00     00
+hex #  0    0      0
+
+
+
+(#F9F9F9)---(#7D7987;)---(#1F1534)---(#000)---(#89C5CC)
+
+pq quando eu coloquei o margin bottom na tag (h1 dentro do section) para tag ( nav) ficou torto ? já que eu coloquei igual o espaçamento do figma ?
+    o elemento h1 esta dentro da caixa main 
+        o espaçamento da tag hq para tag nav 
+        inclui    
+            margin da tag h1 + padding da tag section,main e ou suas margens JUNTAS 

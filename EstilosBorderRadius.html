@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      background: rgb(0,0,0);
+      color: #fff;
+      text-align: center;
+
+    }
+
+    body main{
+      height: 720px;
+      
+      margin: 10px auto;
+
+    }
+    body main button{
+      background: rgb(0,0,0);
+      background: linear-gradient(0deg, rgba(0,0,0,0.9668242296918768) 0%, rgba(0,39,255,1) 89%);
+
+      margin: 20px;
+      border: 0px;
+      padding: 40px 80px;
+      background-color: blue;
+      font-weight: bold;
+    }
+    #b1{
+      border-radius: 50px;  /*aplica a todos os vertices*/
+    }
+    #b2{
+      border-radius: 50px 0px;     /*faz o x*/ /* pontas diagonais*/
+    }
+    #b3{
+      border-radius: 50px 0px 0px;  /* como se  o primeiro fosse ponta oposta da mesma diagonal que o tereiro elemento*/
+    }
+    #b4{
+      border-radius: 50px 0px 0px 0px;   /*sentido horário  */
+    }
+
+    #b5{
+      border-radius: 50px;  /*aplica a todos os vertices*/
+    }
+    #b6{
+      border-radius: 15px 50px;     /*faz o x*/ /* pontas diagonais*/
+    }
+    #b7{
+      border-radius: 1px 10px 50px;  /* como se  o primeiro fosse ponta oposta da mesma diagonal que o tereiro elemento*/
+    }
+    #b8{
+      border-radius: 50px 0px 0px 50px;   /*sentido horário  */
+    }
+
+    #b10{
+      border-radius: 0px 50px 50px 0px;   /*sentido horário  */
+    }
+
+    #b9{
+      border-radius: 50px 50px 0px 50px;   /*sentido horário  */
+    }
+   
+
+
+  </style>
+
+</head>
+<body>
+  <main>
+    <section>
+      <h1>
+        Estilos Border Radius
+      </h1>
+      <h3>usando shorthands</h3>
+    </section>
+
+    <button id="b1">um</button>
+    <button id="b2">dois</button>
+    <button id="b3">três</button>
+    <button id="b4">quatro</button>
+    <br/>
+    <br/>
+    <br/>
+    <button id="b5">um</button>
+    <button id="b6">dois</button>
+    <button id="b7">três</button>
+    <button id="b8">quatro</button>
+    <button id="b9">quatro</button>
+    <button id="b10">quatro</button>
+
+      <!--     (    top      -    bottom   )--> 
+      <!--     (left | right - right | left)--> 
+    <h1>Duvidas</h1>
+    <h5>min-height</h5>
+
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PPjn17AC-M8?start=262" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <h5>unidade   vh em vez de pixel</h5>
+
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v_JDZRsnoeo?start=45" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </main>
+</body>
+</html>
